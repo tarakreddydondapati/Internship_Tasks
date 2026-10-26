@@ -1,0 +1,24 @@
+
+
+import os
+
+# Complete the 'marsExploration' function below.
+# The function accepts STRING s and returns an INTEGER.
+
+def marsExploration(s):
+    count = 0
+
+    for i in range(len(s)):
+        if s[i] != "SOS"[i % 3]:
+            count += 1
+
+    return count
+
+
+if __name__ == '__main__':
+    s = input().strip()
+    result = marsExploration(s)
+    print(result)
+
+
+#https://www.hackerrank.com/challenges/mars-exploration/problem
